@@ -9,9 +9,9 @@
         }
         .container{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: space-around;
-            align-items: center;
+            align-items: stretch;
             border: 1px solid red;
             flex-wrap: wrap;
             width: 100vw;
@@ -19,6 +19,13 @@
         }
         .box{
             border: 1px solid black;
+            flex: 1;
+            background-image: url("galudo.jfif");
+            background-size: 100%;
+            min-width: 10px;
+        }
+        .box:hover{
+            flex-grow: 2;
         }
     </style>
 </head>

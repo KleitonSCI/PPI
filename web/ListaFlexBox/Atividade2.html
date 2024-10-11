@@ -11,24 +11,62 @@
             justify-content: center;
             flex-wrap: wrap;
             
+            
+        }
+        .container2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 100px;
         }
         .panel{
             margin: 5px;
             
-            min-width: 150px;
-            max-width: 150px;
+            min-width: 300px;
+            max-width: 300px;
             height: 1rem;
-            background-color: rgba(173, 173, 173, 0.459);
+            background-color: rgb(173, 173, 173);
+        }
+        h3{
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(173, 173, 173);
+            margin: 20px;
+        }
+        .foto{
+           
+            background-image: url(galudo.jfif);
+            height: 70px;
+            width: 70px;;
+            border: 3px solid rgb(173, 173, 173);;
+            border-radius: 50%;
+            background-size:cover;
+            border: 3px solid rgb(173, 173, 173);;
+            border-radius: 50%;
+            margin: 10px;
+            
+        }
+        .rodape{
+            min-width: 135px;
+            max-width: 135px;
+            height: 1rem;
+            background-color: rgb(173, 173, 173);
         }
     </style>
 </head>
 <body>
-    <h3>Company Logo</h3>
+    
     <div class="container">
+        <h3>Company Logo</h3>
         <div class="panel" id="panel1"></div>
         <div class="panel" id="panel2"></div>
         <div class="panel" id="panel3"></div>
         <div class="panel" id="panel4"></div>
+    </div>
+    <div class="container2">
+        <div class="foto" id="foto1"></div>
+        <div class="rodape" id="rodape1"></div>
     </div>
 </body>
 </html>
