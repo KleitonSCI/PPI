@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div{
+    height: 100vh;
+    display: inline-block;
+    vertical-align: top;
+}
+#infos{
+    background-color: rgb(80, 80, 80);
+    width: 250px;
+    color: white;
+    
+}
+#outros{
+    width:685px;
+    
+
+}
+
+img{
+    width:150px;
+    height:150px;
+    margin: 10px;
+    border: 4px solid white;
+    border-radius: 50%;
+}
+#outros>ul{
+    position: relative;
+    left: 20px;
+}

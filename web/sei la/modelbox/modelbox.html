@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        p,span{
+            width: 60px;
+            height: 60px;
+            border: 1px solid black;
+            outline: 1px solid red;
+            outline-offset: 3px;
+            padding: 10px;
+            background-color: pink;
+            background-image: url("galo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: inline-block;
+        }
+        p:nth-child(1){
+            border-radius: 50%;
+            position: relative;
+            top: 200px;
+            left: 100px;
+        }
+        p:nth-child(2){
+            position: absolute;
+            top:30px;
+            left: 10px;
+        }
+        p:nth-child(3){
+            position: fixed;
+            right: 0px;
+            top: 0px;
+        }
+        .container{
+            position:static;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <p>Lorem 1</p>
+    <p>Lorem 2</p>
+    <p>Lorem 3</p>
+</div>
+    <span>Span1</span>
+    <span>Span2</span>
+    <span>Span3</span>
+</body>
+</html>
