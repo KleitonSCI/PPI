@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+        .container{
+            border: 10px solid white;
+            grid-gap: 20px;
+           
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            grid-template-areas: "a a a . . b" "c c  x x x x" "c c x x x x";
+        }
+        #box1{
+            grid-area:a;
+            background-color: gray;
+            border-radius:2%
+        }
+        #box2{
+            grid-area:b;
+            background-color: gray;
+            border-radius:2%
+        }
+        #box3{
+            grid-area:c;
+            background-color: gray;
+            border-radius:2%
+        }
+        .menor{
+            grid-area: x;
+            background-color: gray;
+            border: 10px solid gray;
+            display:grid;
+            grid-gap: 10px;
+            grid-template-areas: "e f f g" "m i i j";
+            border-radius:2%
+
+        }
+        #box5{
+            grid-area: e;
+            background-color: white;
+            border-radius:2%
+        }
+        #box6{
+            grid-area:f;
+            background-color: white;
+            border-radius:2%
+        }
+        #box7{
+            grid-area:g;
+            background-color: white;
+            border-radius:2%
+        }
+        #box8{
+            grid-area:m;
+            background-color: white;
+            border-radius:2%
+        }
+        #box9{
+            grid-area:i;
+            background-color: white;
+            border-radius:2%
+        }
+        #box10{
+            grid-area: j;
+            background-color: white;
+            border-radius:2%
+        }
+   </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">A</div>
+        <div class="box" id="box2">B</div>
+        <div class="box" id="box3">C</div>
+        <div class="menor" id="box4">
+            <div class="box" id="box5">E</div>
+            <div class="box" id="box6">F</div>
+            <div class="box" id="box7">G</div>
+            <div class="box" id="box8">M</div>
+            <div class="box" id="box9">I</div>
+            <div class="box" id="box10">J</div>
+        </div>
+    </div>
+</body>
+</html>

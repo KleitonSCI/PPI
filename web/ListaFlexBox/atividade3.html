@@ -3,11 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
         .container{
+            background-color: rgb(255, 255, 255);
+            width: 500px;
+            height: 600px;
             display: flex;
+            position:fixed;
+            right:50%;
+            top: 0px;
+            transform:translate(50%);
             flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: flex-start;
             flex-wrap: wrap;
         }
         .linhas{
@@ -15,55 +25,74 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            margin: 10px;
         }
+        .txt{
+            margin:15px;
+            font-size:20pt;
+        }
+        
         #pessoa1{
+            
             background-image: url(pessoa1.jfif);
-            width: 50px;
-            height: 50px;
+            width: 100px;
+            height: 100px;
             background-size: cover;
             border: 3px solid rgb(173, 173, 173);;
             border-radius: 50%;
-            margin: 5px;
+            
         }
         #pessoa2{
             background-image: url(pessoa2.jfif);
-            width: 50px;
-            height: 50px;
+            width: 100px;
+            height: 100px;
             background-size: cover;
             border: 3px solid rgb(173, 173, 173);;
             border-radius: 50%;
-            margin: 5px;
+            
         }
         #pessoa3{
             background-image: url(pessoa3.jfif);
-            width: 50px;
-            height: 50px;
+            width: 100px;
+            height: 100px;
             background-size: cover;
             border: 3px solid rgb(173, 173, 173);;
             border-radius: 50%;
-            margin: 5px;
+            
         }
         #pessoa4{
             background-image: url(pessoa4.jfif);
-            width: 50px;
-            height: 50px;
+            width: 100px;
+            height: 100px;
             background-size: cover;
             border: 3px solid rgb(173, 173, 173);;
             border-radius: 50%;
-            margin: 5px;
+            
         }
+        
     </style>
 </head>
-<body>
+<body style="background-color: rgba(170, 170, 170, 0.788);">
     <div class="container">
         <div class="linhas" id="linha1">
             <div class="pessoas" id="pessoa1"></div>
-            <div id="txt1">Roberto Schmidt <br> <span style="color:gray">Brasília-DF</span> </div>
+            <div class="txt" id="txt1">Roberto Schmidt <br> <span style="color:gray">Bela Vista-GO</span> </div>
         </div>
         
-        <div class="pessoas" id="pessoa2"></div>
-        <div class="pessoas" id="pessoa3"></div>
-        <div class="pessoas" id="pessoa4"></div>
+        <div class="linhas" id="linha2">
+            <div class="pessoas" id="pessoa2"></div>
+            <div class="txt" id="txt1">Liviane Souza <br> <span style="color:gray">Barracão-PR</span> </div>
+        </div>
+        <div class="linhas" id="linha3">
+            <div class="pessoas" id="pessoa3"></div>
+            <div class="txt" id="txt1">Leila Ferreira <br> <span style="color:gray">Pirassununga-SP</span> </div>
+        </div>
+        <div class="linhas" id="linha4">
+            <div class="pessoas" id="pessoa4"></div>
+            <div class="txt" id="txt1">Mário Hirohito <br> <span style="color:gray">Ananindeua-PA</span> </div>
+        </div>
+        
+        
     </div>
 
 </body>
