@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            height:100vh;
+            width: 100vw;
+            display:grid;
+            grid-template-areas: "h h h t t " "c c c t t" "c c c t t" "c c c t t" "c c c t t";
+        }
+        #box1{
+            grid-area: h;
+            background-color: rgb(136, 219, 143);
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+           
+        }
+        
+        #box3{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-area:c;
+            background-color: rgb(255, 255, 255);
+        }
+        #box4{
+            grid-area:t;
+           
+            background-color: rgb(206, 204, 204);
+            display: flex;
+            flex-direction: column;
+            justify-content: top;
+            align-items: center;
+        }
+        #chatElementos{
+            height: 50%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+
+        }
+        #txt{
+            border: 1px solid rgb(0, 0, 0);
+            height: 40px;
+            width: 100%;
+            background-color: white;
+            border-radius: 4%;
+        }
+        #baixo{
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            height: 50%;
+            width: 100%;
+            
+        }
+        .txtLoja{
+            background-color: white;
+            width: 200px;
+            height: 40px;
+            border-radius: 3%;
+            margin: 5px;
+        }
+        .txtCliente{
+            background-color: rgb(124, 201, 156);
+            color: rgb(0, 0, 0);
+            width: 200px;
+            height: 40px;
+            border-radius: 3%;
+            margin: 5px;
+        }
+        .cliente{
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: flex-end;
+        }
+        .loja{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: flex-start;
+            
+        }
+        .ferramentas{
+            flex-wrap: wrap;
+            height: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .f{
+            margin: 10px;
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item{
+            margin: 10px;
+            border-radius: 50%;
+            height: 150px;
+            width: 150px;
+            background-color: rgb(153, 226, 138);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #item1{
+            grid-area: ma;
+        }
+        #item2{
+            grid-area: sh;
+        }
+        #item3{
+            grid-area: sv;
+        }
+        #item4{
+            grid-area: hb;
+        }
+        #item5{
+            grid-area: sa;
+        }
+        #item6{
+            grid-area: bo;
+        }
+        #item7{
+            grid-area: st;
+        }
+        #item8{
+            grid-area: ri;
+        }
+        .produtos{
+            display: grid;
+            grid-template-areas: "ma sh" "sv hb" "sa bo" "st ri";
+        }
+        @media(max-width:700px){
+            .container{
+                display:grid;
+                min-height: 100vh;
+                grid-template-areas: "h t t" "c t t";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">
+            <div class="titulo">
+                <h3>FERRAMENTAS</h3>
+            </div>
+        <div class="ferramentas">
+            <div class="f" id="f1"><h4>PEDIR</h4></div>
+            <div class="f" id="f2"><h4>OFERTAS</h4></div>
+            <div class="f" id="f3"><h4>ENDEREÇO</h4></div>
+            <div class="f" id="f4"><h4>FAVORITOS</h4></div>
+        </div>
+    </div>
+        <div class="box" id="box3">
+            <h3>PRINCIPAL</h3>
+            <div class="produtos">
+                <div class="item" id="item1">Macarronada</div>
+                <div class="item" id="item2">Sushi</div>
+                <div class="item" id="item3">Sorvete</div>
+                <div class="item" id="item4">Hamburguer</div>
+                <div class="item" id="item5">Salada</div>
+                <div class="item" id="item6">Bolo</div>
+                <div class="item" id="item7">Strogonoff</div>
+                <div class="item" id="item8">Risoto</div>
+            </div>
+        </div>
+        <div class="box"; id="box4">
+            <h3 >CHAT</h3>
+            <div id="chatElementos">
+                <div class="loja">
+                    <div class="txtLoja">Estamos indo entregar seu pedido.</div>
+                </div>
+                <div class="cliente">
+                    <div class="txtCliente">Ok</div>
+                </div>
+                
+                
+                
+            </div>
+            <div id="baixo">
+                <div id="txt"><span style="color: gray;">Digite algo...</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
