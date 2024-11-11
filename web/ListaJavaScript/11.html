@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function palindromar(string){
+        string = string.toUpperCase();
+        for(i=0;i<=(string.length/2);i++){
+            if(string[i]!=string[string.length-1-i]){
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    }
+    </script>
+</body>
+</html>

@@ -7,18 +7,13 @@
 </head>
 <body>
     <script>
-        let s = "bla";
-        let n = 4;
-        let b = true;
-        let a = {};
-        let array =["Herculano","Robson","Anderson"];
-
-        function f(v){
-            return typeof(v)
+        let numero = Number(prompt("Informe um numero:"));
+        if(numero%2==0){
+            alert(`O numero ${numero} é par`);
         }
-        alert(n + " é um " +f(n));
-        
-
+        else{
+            alert(`O numero ${numero} é impar`);
+        }
     </script>
 </body>
 </html>

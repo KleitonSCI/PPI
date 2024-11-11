@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let string = "bla";
+        let numero = 4;
+        let boolean = true;
+        let curso = {nome:"Computação",passou:true,duracao:4};
+        let array =["Herculano","Robson","Anderson","Fernando"];
+
+        
+        
+        console.log(`o nome do curso é: ${curso.nome} e o tipo de dado é ${typeof(curso.nome)}`);
+        console.log(`a duração do curso é: ${curso.duracao} e o tipo de dado é ${typeof(curso.duracao)}`);
+        console.log(`está aprovado no curso: ${curso.passou} e o tipo de dado é ${typeof(curso.passou)}`);
+
+        console.log(`um objeto com o dado curso ${JSON.stringify(curso)}`);
+
+        let template=`<p> <input value=${curso.nome}></p>`;
+        document.body.innerHTML=template;
+        
+
+    </script>
+</body>
+</html>

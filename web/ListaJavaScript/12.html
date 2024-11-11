@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="n1">Numero 1</label>
+    <input id="n1" type="text">
+    <br>
+    <label for="n2">Numero 2</label>
+    <input id="n2" type="text">
+    <p id="resultado"></p>
+    <button id="botao" >SOMAR</button>
+
+    <script>
+        let btn = document.querySelector("#botao");
+        btn.addEventListener("click",somar);
+        function somar(){
+            n2=Number(document.getElementById("n2").value);
+            n1=Number(document.getElementById("n1").value);
+            console.log(n1+n2);
+            document.getElementById("resultado").innerText=n1+n2;
+            alert(n1+n2);
+            
+        }
+    </script>
+</body>
+</html>
