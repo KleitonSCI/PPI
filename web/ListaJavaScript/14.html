@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+        }
+        #botao{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button id="botao">0</button>
+    </div>
+
+    <!-- b) -->
+    
+    <script>
+        let btn=document.getElementById("botao");
+        document.querySelector("#botao").addEventListener("click",aumentar);
+
+        function aumentar(){
+            btn.value=Number(btn.value)+1
+            btn.innerHTML=btn.value;
+        }
+    </script>
+</body>
+</html>

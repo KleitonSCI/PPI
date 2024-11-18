@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+        }
+        #botao{
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <label for="minimo">De</label>
+        <input id="minimo" type="text" >
+        <br>
+        <label for="maximo">Até</label>
+        <input type="text" id="maximo">
+        <br>
+        <button id="botao">Gere um número aleatório</button>
+        <p id="texto">Texto</p>
+    </div>
+
+    <!-- b) -->
+    
+    <script>
+        
+        let btn=document.querySelector("#botao")
+        
+        btn.addEventListener("click",aleatorio);
+        
+
+        function aleatorio(){
+            //let min = Number(document.getElementBy("#minimo").value);
+            let min = Number(document.querySelector("#minimo").value);
+            let max = Number(document.querySelector("#maximo").value);
+           // min=Number(document.getElementById("minimo").value);
+           // max=Number(document.getElementById("#maximo").value);
+            
+            document.getElementById("texto").innerText=Math.floor(Math.random()*(max-min+1))+min;
+            //texto.innerHTML=`<p> ${n}</p>`
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-areas: "c1 c2 c3 c4 c5";
+        }
+        #box{
+            height: 250px;
+            width: 250px;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box1{
+            grid-area: c1;
+            
+        }
+        .box2{
+            grid-area: c2;
+        }
+        .box3{
+            grid-area: c3;
+        }
+        .box4{
+            grid-area: c4;
+        }
+        .box5{
+            grid-area: c5;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box" class="box2"></div>
+        <div id="box" class="box1"></div>
+        <div id="box" class="box3"></div>
+        <div id="box" class="box4"></div>
+        <div id="box" class="box5"></div>
+    </div>
+    <script>
+        document.body.onkeyup = function(e) {
+  if (e.key == " " ||
+      e.code == "Space" ||      
+      e.keyCode == 32      
+  ) {
+    let rC1 = Math.floor(Math.random()*16777215).toString(16);
+
+    document.querySelector(".box1").style.backgroundColor="#"+rC1; 
+    document.querySelector(".box1").innerHTML=rC1.toUpperCase();
+
+
+    let rC2 = Math.floor(Math.random()*16777215).toString(16);
+
+    document.querySelector(".box2").style.backgroundColor="#"+rC2;
+    document.querySelector(".box2").innerHTML=rC2.toUpperCase();
+
+
+    let rC3 = Math.floor(Math.random()*16777215).toString(16);
+
+    document.querySelector(".box3").style.backgroundColor="#"+rC3;
+    document.querySelector(".box3").innerHTML=rC3.toUpperCase();
+
+
+    let rC4 = Math.floor(Math.random()*16777215).toString(16);
+
+    document.querySelector(".box4").style.backgroundColor="#"+rC4;
+    document.querySelector(".box4").innerHTML=rC4.toUpperCase();
+
+
+    let rC5 = Math.floor(Math.random()*16777215).toString(16);
+
+    document.querySelector(".box5").style.backgroundColor="#"+rC5;
+    document.querySelector(".box5").innerHTML=rC5.toUpperCase();
+  }
+}
+    </script>
+</body>
+</html>

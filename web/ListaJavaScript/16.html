@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button id="botao">Alterar Cor</button>
+    </div>
+
+
+    <script>
+        document.querySelector("#botao").addEventListener("click",trocar);
+
+        function trocar(){
+            
+            
+            let rC1 = Math.floor(Math.random()*16777215).toString(16);
+            document.querySelector("#container").style.backgroundColor="#"+rC1;
+        }
+    </script>
+</body>
+</html>
