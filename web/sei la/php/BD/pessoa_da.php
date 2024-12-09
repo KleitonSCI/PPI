@@ -22,7 +22,16 @@ function recupera_lista(){
     $stmt= $bd->prepare($sql);
     $stmt->execute();
     $resultado=$stmt->fetchAll(PDO::FETCH_ASSOC);
-    var_dump($resultado);
+    return $resultado;
+}
+function getUsuario($id){
+    $bd=conecta();
+    $sql = "SELECT * FROM usuario WHERE id=?";
+    $stmt= $bd->prepare($sql);
+    $stmt->bindValue(1, $id, PDO::PARAM_INT);
+    $stmt->execute();
+    $resultado=$stmt->fetch(PDO::FETCH_ASSOC);
+    return $resultado;
 }
 recupera_lista();
 
