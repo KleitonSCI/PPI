@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #container{
+            height: 80vh;
+            width: 80vw;;
+            display:grid;
+            grid-template-areas: "c c c c" "a s m d" "n7 n8 n9 i" "n4 n5 n6 i" "n1 n2 n3 i" "n0 v ac i";
+        }
+        .box{
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20pt;
+        }
+        .box:hover{
+            filter:brightness(1.2);
+        }
+        #num1{grid-area: n1;background-color: lightgray;}
+        #num2{grid-area: n2;background-color: lightgray;}
+        #num3{grid-area: n3;background-color: lightgray;}
+        #num4{grid-area: n4;background-color: lightgray;}
+        #num5{grid-area: n5;background-color: lightgray;}
+        #num6{grid-area: n6;background-color: lightgray;}
+        #num7{grid-area: n7;background-color: lightgray;}
+        #num8{grid-area: n8;background-color: lightgray;}
+        #num9{grid-area: n9;background-color: lightgray;}
+        #num0{grid-area: n0;background-color: lightgray;}
+        #limpar{grid-area:ac;background-color: lightgray;}
+        #virgula{grid-area:v;background-color: lightgray;}
+        #adicao{grid-area:a;background-color:lightslategray;font-size: 30pt;}
+        #subtracao{grid-area:s;background-color:lightslategray;font-size: 30pt;}
+        #multiplicacao{grid-area:m;background-color:lightslategray;font-size: 30pt;}
+        #divisao{grid-area:d;background-color:lightslategray;font-size: 30pt;}
+        #painel{grid-area:c;color: white;background-color:black;justify-content: space-between;font-size: 30pt;}
+        #resultado{grid-area:i;background-color:orangered;font-size: 30pt;}
+        #contaF{color: grey;}
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box" id="num1" onclick="escrever(this)">1</div>
+        <div class="box" id="num2" onclick="escrever(this)">2</div>
+        <div class="box" id="num3" onclick="escrever(this)">3</div>
+        <div class="box" id="num4" onclick="escrever(this)">4</div>
+        <div class="box" id="num5" onclick="escrever(this)">5</div>
+        <div class="box" id="num6" onclick="escrever(this)">6</div>
+        <div class="box" id="num7" onclick="escrever(this)">7</div>
+        <div class="box" id="num8" onclick="escrever(this)">8</div>
+        <div class="box" id="num9" onclick="escrever(this)">9</div>
+        <div class="box" id="num0" onclick="escrever(this)">0</div>
+        <div class="box" id="limpar" onclick="limpar()">AC</div>
+        <div class="box" id="virgula" onclick="escrever(this)">,</div>
+        <div class="box" id="adicao" onclick="escrever(this)">+</div>
+        <div class="box" id="divisao" onclick="escrever(this)">÷</div>
+        <div class="box" id="multiplicacao" onclick="escrever(this)">×</div>
+        <div class="box" id="subtracao" onclick="escrever(this)">-</div>
+        <div class="box" id="painel">
+            <div id="contaF"></div>
+            <div id="conta">0</div>
+        </div>
+        <div class="box" id="resultado" onclick="mostraResultado()">=</div>
+    </div>
+    <script>
+        function mostraResultado(){
+
+            let resultadoS=document.getElementById("conta").textContent;
+            if(resultadoS!=0){
+                document.getElementById("contaF").textContent=document.getElementById("conta").textContent;
+                let resultado=eval(resultadoS);
+                document.getElementById("conta").innerHTML=resultado;
+            }
+        }
+        function escrever(botao){
+            let codigo = botao.id;
+            console.log(codigo);
+            //let tecla = document.getElementById(codigo);
+            //console.log(tecla);
+            let conteudo=document.getElementById(codigo).textContent;
+            if(conteudo==","){
+                conteudo=".";
+            }
+            if(conteudo=="÷"){
+                conteudo="/";
+            }
+            if(conteudo=="×"){
+                conteudo="*";
+            }
+            let conta=document.getElementById("conta").textContent;
+            if(conta==0){
+                document.getElementById("conta").innerHTML=conteudo;
+            }
+            else{
+                document.getElementById("conta").innerHTML=conta+conteudo;
+            }
+
+            
+        }
+        function limpar(){
+            document.getElementById("conta").textContent="0";
+            document.getElementById("contaF").textContent="";
+        }
+    </script>
+</body>
+</html>

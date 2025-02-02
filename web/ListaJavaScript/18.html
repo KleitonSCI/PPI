@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            height: 100vh;
+            
+        }
+        #exibir{
+            
+            height: 150px;
+            width: 150px;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="container">
+        <div id="exibir">exibe teclas</div>
+    </div>
+    <script>
+        
+        document.addEventListener("keydown",(event)=>{
+            let tecla = event.code;
+            let div = document.getElementById("exibir");
+            div.innerText=tecla;
+        });
+
+    </script>
 </body>
 </html>
