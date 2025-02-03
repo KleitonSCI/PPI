@@ -3,7 +3,7 @@ function conectar(){
      $host = "localhost";
      $db_name = "crud";
      $username = "root";
-     $password = "isaque123";
+     $password = "aluno";
      $conn = null;
     try {
         $conn = new PDO("mysql:host=" . $host . ";dbname=" . $db_name, 

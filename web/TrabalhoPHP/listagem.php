@@ -32,23 +32,28 @@
     $lista=listarCarros();
     ?>
     <div id="painel">
-    <table>
+    <table id="tabela">
         <tr>
             <th>ID</th>
             <th>Marca</th>
             <th>Modelo</th>
             <th>Ano</th>
             <th>Cor</th>
+            <th>Editar</th>
+            <th>Excluir</th>
         </tr>
     
     <?php
         foreach($lista as $registro){ ?>
         <tr>
-            <td><a href="edicao.php?carro_id=<?php echo $registro["idCarro"]?>"><?php echo $registro["idCarro"]?></a></td>
+            <td><?php echo $registro["idCarro"]?></td>
             <td><?php echo $registro["Marca"]?></td>
             <td><?php echo $registro["Modelo"]?></td>
             <td><?php echo $registro["Ano"]?></td>
             <td><?php echo $registro["Cor"]?></td>
+            <td><a href="edicao.php?id=<?php echo $registro["idCarro"]?>"> Editar</a></td>
+            <td><a href="exclusao.php?id=<?php echo $registro["idCarro"]?>"> Excluir</a></td>
+
         </tr>
         <?php
         }

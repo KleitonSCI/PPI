@@ -22,14 +22,46 @@ function cadastrarCarro($marca, $modelo, $ano ,$cor){
     return $stmt->rowCount();
 }
 function getCarro($id){
-    $bd=conecta();
-    $sql = "SELECT * FROM carros WHERE id=?";
-    $stmt= $bd->prepare($sql);
-    $stmt->bindValue(1, $id, PDO::PARAM_INT);
+    $conn=conectar();
+    $sql = "SELECT * FROM carros WHERE idCarro=:id";
+    $stmt= $conn->prepare($sql);
+    $stmt->bindParam(':id', $id);
+    
+    
+    
     $stmt->execute();
     $resultado=$stmt->fetch(PDO::FETCH_ASSOC);
+   
     return $resultado;
 }
 
+function editarCarro($marca,$modelo,$ano,$cor,$id){
+    $conn=conectar();
+    $sql="UPDATE carros SET Modelo=:modelo, Ano=:ano, Cor=:cor, Marca=:marca WHERE idCarro=:id;";
+    //update carros set Modelo="corolla",Ano="2022",Cor="Vermelho",Marca="Toyota" WHERE idCarro=1;
+    $stmt=$conn->prepare($sql);
+    $stmt->bindParam(':modelo',$modelo);
+    $stmt->bindParam(':ano',$ano);
+    $stmt->bindParam(':cor',$cor);
+    $stmt->bindParam(':marca',$marca);
+    $stmt->bindParam(':id',$id);
+    $stmt->execute();
+    return $stmt->rowCount();
+    
+}
+
+function excluirCarro($id){
+    $conn=conectar();
+    $sql="DELETE FROM * WHERE idCarro=:id";
+    $stmt->bindParam(':id',$id);
+    $stmt->execute();
+    if ($stmt->rowCount() > 0) {
+        return true;
+    } else {
+        return false;
+    }
+
+    
+}
 
 ?>
