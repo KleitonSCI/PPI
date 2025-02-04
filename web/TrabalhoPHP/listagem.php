@@ -20,6 +20,18 @@
         table{
             width: 80vw;
         }
+        #botoes{
+            display:flex;
+            width:100%;
+            justify-content:space-around;
+        }
+        .botao{
+            border: 1px solid black;
+            width: 5%;
+            padding: 3px;
+            background-color: lightblue;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -27,6 +39,10 @@
     
         
     <?php
+    session_start();
+    if(!isset($_SESSION["login"])){
+        header("Location:login.php?erro=1");
+    }
     include_once("bancoDados.php");
     include_once("carroDA.php");
     $lista=listarCarros();
@@ -59,6 +75,12 @@
         }
     ?>
     </table>
+    <br><br><br>
+    <div id="botoes">
+        <a href="sair.php" class="botao"><p>Sair</p> </a>
+        <a href="cadastro.php" class="botao"><p>Cadastrar</p> </a>
+    </div>
+
     </div>
     
     

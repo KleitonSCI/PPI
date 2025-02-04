@@ -1,4 +1,5 @@
 <?php
+include_once("bancoDados.php");
 function listarCarros( $str =""){
     $conn = conectar();
     $sql = "SELECT * FROM carros ";
@@ -52,7 +53,8 @@ function editarCarro($marca,$modelo,$ano,$cor,$id){
 
 function excluirCarro($id){
     $conn=conectar();
-    $sql="DELETE FROM * WHERE idCarro=:id";
+    $sql="DELETE FROM carros WHERE idCarro=:id";
+    $stmt=$conn->prepare($sql);
     $stmt->bindParam(':id',$id);
     $stmt->execute();
     if ($stmt->rowCount() > 0) {

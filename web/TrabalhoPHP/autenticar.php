@@ -28,5 +28,5 @@
 
     
     $_SESSION["login"]=$_POST["login"];
-    header("Location:main.php");
+    header("Location:listagem.php");
 ?>
